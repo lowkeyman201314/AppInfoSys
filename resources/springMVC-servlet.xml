@@ -43,13 +43,8 @@
     <!--配置静态资源文件-->
     <mvc:resources mapping="/statics/**" location="/statics/"/>
 
-    <!--配置jsp视图解析器-->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
 
-    <!--【可选】配置多视图解析器-->
+    <!--配置多视图解析器-->
     <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
         <property name="favorParameter" value="true"/>
         <property name="defaultContentType" value="text/html"/>

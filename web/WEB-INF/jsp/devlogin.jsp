@@ -32,24 +32,21 @@
 
 <body class="login">
 <div>
-    <a class="hiddenanchor" id="signup"></a>
-    <a class="hiddenanchor" id="signin"></a>
-
     <div class="login_wrapper">
         <div class="animate form login_form">
             <section class="login_content">
-                <form>
+                <form action="dologin" method="post">
                     <h1>APP开发者平台</h1>
                     <div>
-                        <input type="text" class="form-control" placeholder="请输入用户名" required=""/>
+                        <input type="text" name="devCode" class="form-control" placeholder="请输入用户名" required=""/>
                     </div>
                     <div>
-                        <input type="password" class="form-control" placeholder="请输入密码" required=""/>
+                        <input type="password" name="devPassword" class="form-control" placeholder="请输入密码" required=""/>
                     </div>
+                    <div>${error}</div>
                     <div>
-                        <a class="btn btn-primary submit" href="${pageContext.request.contextPath }/index.jsp">登录</a>
-                        <a class="btn btn-default"
-                           href="${pageContext.request.contextPath }/devloperlogin.jsp">重填</a>
+                        <button class="btn btn-success" type="submit">登录</button>
+                        <button class="btn btn-default" type="reset">重填</button>
                     </div>
 
                     <div class="clearfix"></div>
